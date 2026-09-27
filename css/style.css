@@ -66,6 +66,9 @@ color: var(--cor-primaria);
 .hero-section h4{
     color: var(--cor-fundo);
 }
+.cursos{
+    padding: 90px 0px;
+}
 
 .cursos .card{
     font-size: 14px;
@@ -78,6 +81,27 @@ color: var(--cor-primaria);
     background: #ffffff;
     box-shadow: 15px 15px 25px #bebebe,
              -15px -15px 25px #ffffff;
+}
+
+.cursos .modal-content{
+     width: auto;
+     height: auto;
+     border-radius: 18px;
+     font-size: 14px;   
+     text-align: justify;
+     background-color: var(--cor-fundo);
+     color: var(--cor-texto);
+}
+.cursos .modal-header{
+    background-color: var(--cor-primaria);
+    border-radius: 18px 18px 0px 0px;
+    color: var(--cor-fundo);
+    font-weight: bold;
+}
+
+.cursos .modal-content h6{
+    color: var(--cor-primaria);
+    font-weight: bold;
 }
 
 .card-img-top{
@@ -109,9 +133,6 @@ color: var(--cor-primaria);
  will-change: transform;
 }
 
-.btn:disabled {
- pointer-events: none;
-}
 
 .btn:hover {
  color: var(--cor-primaria);
@@ -135,9 +156,21 @@ color: var(--cor-primaria);
     background-color: var(--cor-primaria);
 }
 
+.nav-pills .nav-link.active {
+    background-color: #DCD5C5;
+    color: var(--cor-primaria);
+
+}
+
 .navbar a{
     color: var(--cor-fundo);
     font-weight: bold;
+}
+
+.navbar .collapse{
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    border-radius: 18px;
 }
 
 .navbar a:hover{
@@ -145,17 +178,27 @@ color: var(--cor-primaria);
 }
 
 .indicadores{
-    margin: 80px 0px;
+    margin: 90px 0px;
     color: white;
     font-size: large;
     font-weight: bold;
     background-color: var(--cor-primaria);
-    padding: 30px;
+    padding: 40px;
 }
 
 .card-title{
     color: var(--cor-primaria);
     font-weight: 700;
+}
+
+#contato{
+    margin: 90px 0px;
+}
+
+#contato a{
+    color: var(--cor-texto);
+    font-weight: bold;
+    font-size: 15px;
 }
 
 form{
@@ -166,7 +209,7 @@ form{
     padding: 35px;
     font-weight: 500;
     font-size: 14px;
-    margin: 90px 20px;
+    margin: 0px 0px 90px 0px;
     width: auto;
 
 }
@@ -177,7 +220,7 @@ form{
 
 
 form .btn{
-    width: 50%;
+    width: auto;
 }
 form .form-control{
     border-radius: 10px;
@@ -215,7 +258,7 @@ footer h7{
     overflow: hidden;
     border: 1px solid #dcd5c5;
     background-color: var(--cor-fundo);
-    margin: 70px 0px;
+    margin: 140px 0px 50px 0px;
 }
 
 .tableCursos thead {
@@ -237,4 +280,109 @@ footer h7{
     color: var(--cor-texto);
     font-weight: bolder;
     opacity: 0.7;
+}
+
+
+.noticias {
+    padding: 90px 0;
+}
+
+.noticias h3 {
+    color: #082602;
+    font-weight: 700;
+}
+
+.noticias h5 {
+    color: #082602;
+    font-weight: 700;
+}
+
+.noticias-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 5px 20px;
+    scroll-behavior: smooth;
+    cursor: pointer;
+    scrollbar-width: thin;
+    border-radius: 18px;
+}
+
+
+.noticias-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.noticias-container::-webkit-scrollbar-thumb {
+    background: #082602;
+    border-radius: 10px;
+}
+
+.noticia-col {
+    flex: 0 0 300px;
+}
+
+.noticias .card {
+    width: 100%;
+    height: 450px;
+    border-radius: 18px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.noticias .card:hover {
+    transform: translateY(-5px);
+}
+
+.noticias .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.noticias .card-body .btn {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+
+.noticias .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.noticias .card-title {
+    color: #082602;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.noticias .card-text {
+    color: var(--cor-texto);
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .noticia-col {
+        width: 250px;
+    }
+
+    .noticias .card-img-top {
+        height: 160px;
+    }
+
+    .noticias .card {
+        height: 350px;
+    }
+
+    p, a, .card-text, td {
+        font-size: 12px !important;
+    }
+    h1,h2,h3,h4,h5,h6,h7{
+        font-size: 18px;
+    }
 }

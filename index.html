@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unaerp</title>
+    <title>Universidade VerdeVale</title>
 
+      <!--icon pagina-->
+          <link rel="icon" type="image/x-icon" href="img/logo_transparent2.ico"/>
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
     <!--add bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -18,15 +20,15 @@
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar fixed-top navbar-expand-lg" id="navbar" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.html">
          <img src="img/logo_branca_nav.png" alt="" width="40" height="40"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav nav-pills">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#home">Home</a>
         </li>
@@ -34,7 +36,7 @@
           <a class="nav-link" href="#cursos">Cursos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Notícias</a>
+          <a class="nav-link" href="#noticias">Notícias</a>
         </li>
          <li class="nav-item">
           <a class="nav-link" href="#contato">Contato</a>
@@ -44,9 +46,7 @@
             Áreas de Ensino
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Saúde</a></li>
           </ul>
         </li>
       </ul>
@@ -55,11 +55,12 @@
     </nav>
     <!--end navbar-->
 
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
     <br/>
 
 
     <!--hero section-->
-    <div class="hero-section">
+    <div class="hero-section" id="home">
         <div class="container">
             <div class="row align-itens-end">
                 <div class="col-md-7">
@@ -78,8 +79,6 @@
     <!--content-->
      <div class="container">
 
-    <br/><br/>
-
     <!--cursos -->
     <div class="cursos" id="cursos">
 
@@ -87,6 +86,8 @@
         <div class="row justify-content-center">
             <h3>Cursos de Graduação</h3>
 
+
+            <!-- Medicina -->
             <div class="col-lg-4 col-md-6">
               <div class="card">
               <img src="img/medicina.jpg" class="card-img-top" alt="...">
@@ -95,12 +96,37 @@
              <p class="card-text">Formação médica baseada em ciência, prática clínica e cuidado humanizado, preparando profissionais para atuar na promoção, prevenção e recuperação da saúde.</p>
             <div class="row justify-content-end">
               <div class="col-auto">
-             <a href="#" class="btn btn-primary">Saiba Mais</a>
+             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMed">Saiba Mais</a>
               </div>
             </div>
             </div>
         </div>
             </div>
+            <!--Modal Medicinal-->
+            <div class="modal" data-bs-theme="dark" id="modalMed">
+                 <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                 <h5 class="modal-title">Medicina</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                <div class="modal-body">
+                    <h6>Objetivos:</h6>
+                  <p>Formar profissionais capazes de atuar na promoção da saúde, prevenção de doenças, diagnóstico, tratamento e acompanhamento de pacientes, com base científica, ética e humanizada.</p>
+                  <h6>Carga Horária:</h6>
+                  <p>6 anos — formação em período integral.</p>
+                  <h6> Público-Alvo:</h6>
+                  <p>Estudantes interessados em saúde, ciências médicas e cuidado com o ser humano, com disposição para uma formação prática e científica.</p>
+                  <h6>Descrição:</h6>
+                  <p>O curso de Medicina prepara o estudante para compreender o funcionamento do corpo humano, reconhecer diferentes condições de saúde e desenvolver habilidades para atuação em ambientes clínicos e hospitalares. A formação combina conhecimentos teóricos, atividades práticas e experiências de atendimento.</p>
+                </div>
+              </div>
+              </div>
+            </div>
+            <!--end Modal Medicinal-->
+            <!-- end Medicina -->
+
+                <!-- Biologia -->
               <div class="col-lg-4 col-md-6">
               <div class="card">
               <img src="img/biologia.jpg" class="card-img-top" alt="...">
@@ -109,12 +135,41 @@
              <p class="card-text">Explore a vida em suas diferentes formas e desenvolva conhecimentos em biodiversidade, genética, ecologia e biotecnologia.</p>
              <div class="row justify-content-end align-items-end">
               <div class="col-auto">
-             <a href="#" class="btn btn-primary">Saiba Mais</a>
+             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBio">Saiba Mais</a>
               </div>
             </div>
         </div>
             </div>
               </div>
+
+              <!-- Modal Biologia -->
+            <div class="modal" data-bs-theme="dark" id="modalBio">
+            <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-content">
+               <div class="modal-header">
+                <h5 class="modal-title">Biologia</h5>
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Objetivos:</h6>
+                <p> Formar profissionais capazes de compreender os processos relacionados à vida, atuando em áreas como conservação ambiental, pesquisa, educação, genética, ecologia e biotecnologia.</p>
+                <h6>Carga Horária:</h6>
+                <p> 4 anos — formação em período integral.</p>
+                <h6>Público-Alvo:</h6>
+                <p>Estudantes interessados em ciência, natureza, meio ambiente, pesquisa e nos diferentes organismos e processos que compõem a vida.</p>
+                <h6>Descrição:</h6>
+                <p>O curso de Biologia proporciona uma formação ampla sobre os seres vivos e suas relações com o ambiente. O estudante desenvolve conhecimentos em áreas como zoologia, botânica, genética, microbiologia e ecologia, podendo seguir diferentes caminhos profissionais e acadêmicos.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- end Modal Biologia -->
+        <!-- end Biologia -->
+
+        <!-- Enfermagem -->
             <div class="col-lg-4 col-md-6">
               <div class="card">
               <img src="img/enfermagem.jpg" class="card-img-top" alt="...">
@@ -124,13 +179,42 @@
              <div class="container">
             <div class="row justify-content-end">
               <div class="col-auto">
-             <a href="#" class="btn btn-primary">Saiba Mais</a>
+             <a href="#" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#modalEnf">Saiba Mais</a>
               </div>
              </div>
             </div>
         </div>
             </div>
             </div>
+
+            <!-- Modal Enfermagem -->
+        <div class="modal" data-bs-theme="dark" id="modalEnf">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                 <div class="modal-header">
+                    <h5 class="modal-title">Enfermagem</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                     </button>
+            </div>
+            <div class="modal-body">
+                <h6>Objetivos:</h6>
+                <p>Formar profissionais preparados para prestar assistência integral à saúde, atuando na prevenção de doenças, promoção da saúde, recuperação e cuidado de 		pacientes.</p>
+                <h6>Carga Horária:</h6>
+                <p> 5 anos — formação em período integral.</p>
+                <h6>Público-Alvo:</h6>
+                <p>Estudantes que desejam trabalhar diretamente com o cuidado à saúde e que valorizam o conhecimento científico, a responsabilidade e o atendimento 			humanizado.</p>
+                <h6>Descrição:</h6>
+                <p>A graduação em Enfermagem prepara o estudante para atuar em diferentes níveis de atenção à saúde. A formação envolve conhecimentos científicos, técnicas de assistência, gestão e práticas de cuidado, desenvolvendo profissionais preparados para diferentes contextos de atuação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Modal Enfermagem -->
+        <!-- end Enfermagem -->
+
+             <!-- Farmácia -->
               <div class="col-lg-4 col-md-6">
               <div class="card">
               <img src="img/farmacia.jpg" class="card-img-top" alt="...">
@@ -139,12 +223,41 @@
              <p class="card-text">Uma formação que conecta ciência, saúde e tecnologia para preparar profissionais para atuar com medicamentos, análises e cuidado farmacêutico.</p>
              <div class="row justify-content-end">
               <div class="col-auto">
-             <a href="#" class="btn btn-primary">Saiba Mais</a>
+             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFarmacia">Saiba Mais</a>
               </div>
             </div>
         </div>
             </div>
               </div>
+
+              <!-- Modal Farmácia -->
+        <div class="modal" data-bs-theme="dark" id="modalFarmacia">
+         <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Farmácia</h5>
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Objetivos:</h6>
+                <p>Formar profissionais capazes de atuar na área de medicamentos, análises clínicas, saúde pública, indústria farmacêutica e atenção à saúde.</p>
+                <h6>Carga Horária:</h6>
+                <p>5 anos — formação em período integral.</p>
+                <h6>Público-Alvo:</h6>
+                <p>Estudantes interessados em química, biologia, medicamentos, saúde e tecnologia aplicada às ciências farmacêuticas.</p>
+                <h6>Descrição:</h6>
+                <p>O curso de Farmácia integra conhecimentos de química, biologia e saúde para preparar profissionais para diferentes áreas do setor farmacêutico. Durante a graduação, o estudante desenvolve conhecimentos sobre medicamentos, análises, produção e assistência farmacêutica.</p>
+            </div>
+               </div>
+             </div>
+            </div>
+               <!-- end Modal Farmácia -->
+               <!-- end Farmácia -->
+
+               <!-- Fisioterapia -->
             <div class="col-lg-4 col-md-6">
               <div class="card">
               <img src="img/fisioterapia.jpg" class="card-img-top" alt="...">
@@ -153,12 +266,41 @@
              <p class="card-text">Desenvolva conhecimentos para promover movimento, funcionalidade e qualidade de vida por meio da avaliação e reabilitação.</p>
              <div class="row justify-content-end">
               <div class="col-auto">
-             <a href="#" class="btn btn-primary">Saiba Mais</a>
+             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFisio">Saiba Mais</a>
               </div>
             </div>
         </div>
             </div>
             </div>
+
+            <!-- Modal Fisioterapia -->
+            <div class="modal" data-bs-theme="dark" id="modalFisio">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Fisioterapia</h5>
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Objetivos:</h6>
+                <p>Formar profissionais capazes de avaliar, prevenir e tratar alterações relacionadas ao movimento e à funcionalidade do corpo humano, contribuindo para a qualidade de vida dos pacientes.</p>
+                <h6>Carga Horária:</h6>
+                <p>5 anos — formação em período integral.</p>
+                <h6>Público-Alvo:</h6>
+                <p>Estudantes interessados em anatomia, movimento humano, saúde, reabilitação e qualidade de vida.</p>
+                <h6>Descrição:</h6>
+                <p>A graduação em Fisioterapia oferece conhecimentos sobre o funcionamento do corpo e os mecanismos relacionados ao movimento. O estudante desenvolve habilidades para atuar na prevenção e recuperação de alterações funcionais, utilizando diferentes técnicas e recursos terapêuticos.</p>
+                 </div>
+                </div>
+                </div>
+            </div>
+             <!-- end Modal Fisioterapia -->
+             <!-- end Fisioterapia -->
+
+             <!-- Nutrição -->
              <div class="col-lg-4 col-md-6">
               <div class="card">
               <img src="img/nutricao2.jpg" class="card-img-top" alt="...">
@@ -167,18 +309,44 @@
              <p class="card-text">Estude a relação entre alimentação, organismo e saúde para atuar na promoção de hábitos alimentares e qualidade de vida.</p>
               <div class="row justify-content-end">
               <div class="col-auto">
-             <a href="#" class="btn btn-primary">Saiba Mais</a>
+             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNutri">Saiba Mais</a>
               </div>
             </div>
         </div>
             </div>
              </div>
+
+             <!-- Modal Nutrição -->
+        <div class="modal" data-bs-theme="dark" id="modalNutri">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nutrição</h5>
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Objetivos:</h6>
+                <p> Formar profissionais capazes de compreender a relação entre alimentação, nutrientes e saúde, atuando na promoção da qualidade de vida e na prevenção de doenças relacionadas à alimentação.</p>
+                <h6>Carga Horária:</h6>
+                <p>4 anos — formação em período integral.</p>
+                <h6>Público-Alvo:</h6>
+                <p>Estudantes interessados em alimentação, saúde, ciência, comportamento alimentar e promoção da qualidade de vida.</p>
+                <h6>Descrição:</h6>
+                <p>O curso de Nutrição aborda a relação entre alimentação e saúde em diferentes fases da vida. A formação envolve conhecimentos sobre nutrientes, avaliação nutricional, planejamento alimentar, segurança dos alimentos e educação nutricional, preparando o estudante para diferentes áreas de atuação.</p>
+            </div>
+            </div>
+            </div>
+        </div>
+              <!-- end Modal Nutrição -->
+              <!-- end Nutrição -->
+
         </div>
     </div>
     </div>
     <!--end cursos-->
-
-    <br/><br/>
 
      </div>
 
@@ -271,7 +439,156 @@
 </div>
          <!--end consulta de cursos-->
 
-         <br/><br/>
+          </div>
+
+ <!-- notícias -->
+<div class="noticias" id="noticias">
+
+    <div class="container">
+
+        <div class="text-center">
+            <h3>NOTÍCIAS</h3>
+            <h5>O que acontece na UVV?</h5>
+            <p>
+                Acompanhe as novidades, eventos e projetos
+                da nossa comunidade acadêmica.
+            </p>
+        </div>
+
+        <div class="noticias-container">
+
+            <div class="noticia-col">
+                <div class="card">
+                    <img src="img/noticia01.png"
+                         class="card-img-top"
+                         alt="Semana de Saúde e Bem-Estar">
+                    <div class="card-body align-items-end d-flex flex-column">
+                        <h5 class="card-title">
+                            UVV realiza Semana de Saúde e Bem-Estar
+                        </h5>
+                        <p class="card-text">
+                            A Universidade VerdeVale promoveu uma semana
+                            dedicada à saúde e bem-estar...
+                        </p>
+                        <a href="#" class="btn">
+                            Leia Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="noticia-col">
+                <div class="card">
+                    <img src="img/noticia02.png"
+                         class="card-img-top"
+                         alt="Pesquisa em Biologia">
+                    <div class="card-body align-items-end d-flex flex-column">
+                        <h5 class="card-title">
+                            Pesquisa em Biologia recebe prêmio nacional
+                        </h5>
+                        <p class="card-text">
+                            Um grupo de pesquisadores do curso de Biologia
+                            da UVV foi premiado em um concurso nacional.
+                        </p>
+                        <a href="#" class="btn">
+                            Leia Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="noticia-col">
+                <div class="card">
+                    <img src="img/noticia03.png"
+                         class="card-img-top"
+                         alt="Campanha de vacinação">
+                    <div class="card-body align-items-end d-flex flex-column">
+                        <h5 class="card-title">
+                            Enfermagem da UVV participa de campanha de vacinação
+                        </h5>
+                        <p class="card-text">
+                            Estudantes e professores do curso de Enfermagem
+                            participaram ativamente de uma campanha...
+                        </p>
+                        <a href="#" class="btn">
+                            Leia Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="noticia-col">
+                <div class="card">
+                    <img src="img/noticia04.png"
+                         class="card-img-top"
+                         alt="Notícia">
+                    <div class="card-body align-items-end d-flex flex-column">
+                        <h5 class="card-title">
+                            UVV promove projeto de saúde mental para estudantes
+                        </h5>
+                        <p class="card-text">
+                            A Universidade VerdeVale iniciou um novo projeto voltado
+                            à saúde mental dos estudantes...
+                        </p>
+                        <a href="#" class="btn">
+                            Leia Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="noticia-col">
+                <div class="card">
+                    <img src="img/noticia05.png"
+                         class="card-img-top"
+                         alt="Pesquisa em Biologia">
+                    <div class="card-body align-items-end d-flex flex-column">
+                        <h5 class="card-title">
+                            UVV realiza Feira de Saúde aberta à comunidade
+                        </h5>
+                        <p class="card-text">
+                             Estudantes e professores da UVV participaram de uma
+                            Feira de Saúde com orientações sobre...
+                        </p>
+                        <a href="#" class="btn">
+                            Leia Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="noticia-col">
+                <div class="card">
+                    <img src="img/noticia06.png"
+                         class="card-img-top"
+                         alt="Campanha de vacinação">
+                    <div class="card-body align-items-end d-flex flex-column">
+                        <h5 class="card-title">
+                            UVV lança programa de atividade física para estudantes
+                        </h5>
+                        <p class="card-text">
+                            A Universidade VerdeVale lançou um programa de atividades
+                             físicas para incentivar hábitos saudáveis...
+                        </p>
+                        <a href="#" class="btn">
+                            Leia Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- fim notícias -->
+
+   <div class="container">
+
 
         <!-- Contato -->
 <div class="formulario" id="contato">
@@ -291,13 +608,12 @@
                 </p>
 
                 <div class="mt-4">
-                    <p><strong>📍 Endereço</strong><br>
-                    Ribeirão Preto — SP</p>
+                    <p><a><img class="img-icon-social" src="img/endereco.png" alt="endereco" height="20" width="20">Ribeirão Preto - SP</a></p>
 
-                    <p><strong>✉ E-mail</strong><br>
+                    <p><a><img class="img-icon-social" src="img/email.png" alt="email" height="20" width="20">Email</a><br>
                     contato@verdevale.edu.br</p>
 
-                    <p><strong>☎ Telefone</strong><br>
+                    <p><a><img class="img-icon-social" src="img/telefone.png" alt="telefone" height="20" width="20">Telefone</a><br>
                     (16) 0000-0000</p>
                 </div>
             </div>
@@ -410,6 +726,7 @@
     </div>
 </div>
 <!-- End contato -->
+ </div>
 
     </div>
 
@@ -426,12 +743,11 @@
         <br/><br/>
 
         <div class="row justify-content-end">
-          <div class="col-md-2">
+          <div class="col-lg-3 col-md-4 col-sm-6">
             <h7>Ribeirão Preto</h7>
-            <p>Av. Avenida da Silva, X.XX
-            Bairro XV, Ribeirão Preto-SP
-            CEP XXXXX-XXX
-            <br>
+            <p>Av. Avenida da Silva, X.XX<br>
+            Bairro XV, Ribeirão Preto-SP<br>
+            CEP XXXXX-XXX<br>
             Tel: (99)99999-9999</p>
           </div>
         </div>
