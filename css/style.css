@@ -308,6 +308,8 @@ footer h7{
     cursor: pointer;
     scrollbar-width: thin;
     border-radius: 18px;
+    scrollbar-color: var(--cor-primaria) var(--cor-fundo);
+
 }
 
 
@@ -316,7 +318,6 @@ footer h7{
 }
 
 .noticias-container::-webkit-scrollbar-thumb {
-    background: #082602;
     border-radius: 10px;
 }
 
@@ -385,4 +386,10 @@ footer h7{
     h1,h2,h3,h4,h5,h6,h7{
         font-size: 18px;
     }
+
+    .nav-pills .nav-link.active {
+    background-color: var(--cor-primaria);
+    color: #DCD5C5;
+    font-weight: bold;
+}
 }
