@@ -1,6 +1,7 @@
 
-
-/* 1. VARIÁVEIS */
+/* ==========================================================
+   VARIÁVEIS
+   ========================================================== */
 :root {
     --cor-primaria: #082602;
     --cor-secundaria: #71856A;
@@ -9,8 +10,6 @@
     --cor-texto: #101510;
 }
 
-
-/*2. BASE E TIPOGRAFIA */
 body {
     background-color: white;
     color: var(--cor-texto);
@@ -23,7 +22,10 @@ h1, h2, h3 {
     color: var(--cor-primaria);
 }
 
-/* Cards (uso global) */
+
+/* COMPONENTES GLOBAIS */
+
+/* --- Cards (uso global) --- */
 .card-title {
     font-size: medium;
     font-weight: 700;
@@ -40,8 +42,7 @@ h1, h2, h3 {
     border-radius: 18px 18px 0 0;
 }
 
-
-/* 3. BOTÕES*/
+/* --- Botões --- */
 .btn {
     appearance: none;
     background-color: var(--cor-primaria);
@@ -78,7 +79,7 @@ h1, h2, h3 {
 }
 
 
-/*4. NAVBAR */
+/* NAVBAR */
 .navbar {
     background-color: var(--cor-primaria);
     height: 85px;
@@ -107,7 +108,7 @@ h1, h2, h3 {
 }
 
 
-/*5. HERO*/
+/*HERO */
 .hero-section {
     width: 100%;
     max-width: 100%;
@@ -176,7 +177,7 @@ h1, h2, h3 {
 }
 
 
-/*6. CURSOS (cards e modal) */
+/* CURSOS (cards e modal)*/
 .cursos {
     padding: 90px 0;
 }
@@ -184,10 +185,10 @@ h1, h2, h3 {
 .cursos .card {
     width: auto;
     height: auto;
-    min-height: 250px;
+    min-height: 380px;
     max-width: 100%;
     margin: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     border-radius: 18px;
     background: #ffffff;
@@ -218,7 +219,7 @@ h1, h2, h3 {
 }
 
 
-/*7. INDICADORES */
+/*INDICADORES */
 .indicadores {
     margin: 90px 0;
     padding: 40px;
@@ -233,7 +234,8 @@ h1, h2, h3 {
 }
 
 
-/*8. NOTÍCIAS */
+/* NOTÍCIAS */
+
 #noticias {
     padding-top: 150px;
 }
@@ -248,7 +250,8 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* Carrossel horizontal */
+/* --- Carrossel horizontal --- */
+
 .noticias-container {
     display: flex;
     flex-wrap: nowrap;
@@ -275,11 +278,12 @@ h1, h2, h3 {
     flex: 0 0 300px;
 }
 
-/* Card de notícia */
+/* --- Card de notícia --- */
+
 .noticias .card {
     width: 100%;
-    border-radius: 18px;
     height: 350px;
+    border-radius: 18px;
     background-color: white;
     transition: transform 0.3s ease;
 }
@@ -317,14 +321,21 @@ h1, h2, h3 {
     text-align: justify;
 }
 
-.noticia-banner{
- width: 100%;
- max-width: 100%;
- height: auto;
- border-radius: 25px;
+/* --- Página individual da notícia --- */
+
+.noticia-container {
+    padding: 160px 0 90px 0;
 }
 
-/*9. CONTATO E FORMULÁRIO */
+.noticia-banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+
+/*CONTATO E FORMULÁRIO*/
 #contato {
     margin: 90px 0;
     padding-top: 150px;
@@ -363,7 +374,8 @@ form .btn {
 }
 
 
-/* 10. TABELA DE CURSOS */
+/*TABELA DE CURSOS*/
+
 .table {
     border-radius: 18px;
 }
@@ -388,14 +400,16 @@ form .btn {
 }
 
 
-/*11. RODAPÉ*/
+/*RODAPÉ*/
+
 footer,
 footer h5 {
     background-color: var(--cor-primaria);
     color: white;
 }
 
-footer p, footer a {
+footer p,
+footer a {
     font-size: 14px;
     font-weight: 400;
 }
@@ -414,14 +428,17 @@ footer h7 {
     opacity: 0.7;
 }
 
-.img-icon-social:hover{
+.img-icon-social:hover {
     transform: translateY(-2px);
-    
 }
 
 
-/* 12. RESPONSIVIDADE */
+/*RESPONSIVIDADE*/
+
+/* --- Tablet (≤ 990px) --- */
 @media (max-width: 990px) {
+
+    /* Navbar */
     .navbar {
         height: auto;
         min-height: 60px;
@@ -435,25 +452,16 @@ footer h7 {
     }
 }
 
+/* --- Mobile (≤ 767px) --- */
 @media (max-width: 767px) {
+
     /* Tipografia */
     p, a, .card-text, td {
         font-size: 12px !important;
     }
 
-    h1, h2, h3, h4, h5, h6, h7 {
+    h1, h2, h3, h4, h5, h6 {
         font-size: 18px;
-    }
-
-    .hero-section h1{
-        font-size: 22px;
-    }
-
-    .hero-section h4{
-        font-size: 16px;
-    }
-    .hero-section p{
-        font-size: 12px;
     }
 
     .img-fluid {
@@ -485,24 +493,48 @@ footer h7 {
         text-align: center;
     }
 
-    /* Notícias */
-    .noticia-col {
-        width: 250px;
+    .hero-section h1 {
+        font-size: 22px;
     }
 
-    .noticias .card {
-        height: 350px;
+    .hero-section h4 {
+        font-size: 16px;
+    }
+
+    .hero-section p {
+        font-size: 12px;
+    }
+
+    /* Cursos */
+    .cursos .card {
+        min-height: 300px;
+        font-size: 14px;
+    }
+
+    /* Notícias */
+    #noticias {
+        padding: 20px;
+    }
+
+    .noticia-col {
+        width: 250px;
     }
 
     .noticias .card-img-top {
         height: 160px;
     }
 
-    #noticias{
-        padding: 20px;
+    .noticia-container {
+        padding: 90px 0 90px 0;
     }
 
-    #contato{
+    /* Contato */
+    #contato {
         padding: 0;
+    }
+
+    /* Rodapé */
+    footer h7 {
+        font-size: 14px;
     }
 }
